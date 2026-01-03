@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+    <div id="kutu">Renk Yok</div>
+    <br>
+    <button id="kirmizi">Kirmizi</button><br>
+    <button id="mavi">Mavi</button><br>
+    <button id="yesil">Yesil</button><br>
+    <button id="sari">Sari</button><br>
+
+    <script type="text/javascript">
+        var kutu = document.getElementById("kutu");
+        var kirmizi = document.getElementById("kirmizi");
+        var mavi = document.getElementById("mavi");
+        var yesil = document.getElementById("yesil");
+        var sari = document.getElementById("sari");
+
+        function renkdegistir(isim){
+            kutu.innerHTML="Kutu rengi: "+isim;
+        }
+
+        kirmizi.onclick=function(){
+            renkdegistir("Kırmızı");
+        }
+        mavi.onclick=function(){
+            renkdegistir("Mavi");
+        }
+        yesil.onclick=function(){
+            renkdegistir("Yesil");
+        }
+        sari.onclick=function(){
+            renkdegistir("Sari");
+        }
+    </script>
+</body>
+</html>

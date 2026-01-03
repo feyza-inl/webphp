@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+       Urun Adi:<input type="text" id="urunadi">
+       <button id="ekle">Ekle</button>
+       <button id="sil">Sil</button>
+       <div id="sepet"></div>
+       <div id="uruntoplam"></div>
+
+    <script type="text/javascript">
+        var urunler=[];
+        var urun = document.getElementById("urunadi");
+        var ekle = document.getElementById("ekle");
+        var sil = document.getElementById("sil");
+        var sepet = document.getElementById("sepet");
+        var toplam= document.getElementById("uruntoplam");
+
+        function listeyigoster(){
+            sepet.innerHTML = "";
+            for(var i=0;i<urunler.length;i++){
+                sepet.innerHTML+=urunler[i] + "<br>";
+            }
+            toplam.innerHTML = "Toplam Urun: " + urunler.length;
+
+        }
+
+        sil.onclick=function(){
+            urunler = [];
+            listeyigoster();
+        }
+
+        ekle.onclick=function(){
+            if(urun.value!=""){
+                urunler.push(urun.value);
+                urun.value="";
+                listeyigoster();
+            }
+        }
+    </script>
+</body>
+</html>
