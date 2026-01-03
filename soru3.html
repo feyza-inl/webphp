@@ -1,0 +1,24 @@
+<html>
+    `Bir web dokümanında bulunan checkbox türünden input elemanları için; checkbox'ın her işaretlenmesinde checkbox'ın durumunu ters çeviren (işaretli <--> işaretsiz) javascript fonksiyon kodunu bir örnek HTML input ifadesi ile birlikte yazınız`
+<head>
+</head>
+<body>
+    Bunu isaretleyin:<input type="checkbox" id="checkbox1" onclick="terscevir(this)">
+    <br>
+    <br>
+    Bunu isaretleyin:<input type="checkbox" id="chackbox2" onclick="terscevir(this)">
+
+    <script type="text/javascript">
+        function terscevir(eleman){
+            // Checkbox'ın mevcut durumunu tersine çevir
+            if(eleman.checked == true){
+                eleman.checked = false;
+            }
+            else{
+                eleman.checked = true;
+            }
+        }
+
+    </script>
+</body>
+</html>
